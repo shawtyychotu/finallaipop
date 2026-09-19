@@ -1,0 +1,89 @@
+@import "tailwindcss";
+
+:root {
+  --font-body: 'Outfit', 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-handwriting: 'Patrick Hand', 'Caveat', cursive;
+  --font-script: 'Great Vibes', 'Alex Brush', cursive;
+  --font-typewriter: 'Courier Prime', monospace;
+
+  --bg-sage-envelope: #C0D3CE;
+  --bg-sage-shadow: #A8BCB7;
+  --bg-paper: #FAF8F5;
+  --paper-line: #E8E2D8;
+}
+
+@layer base {
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  html, body {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    background-color: #F5F4F0;
+    font-family: var(--font-body);
+    color: #2D312E;
+  }
+}
+
+.font-handwriting {
+  font-family: var(--font-handwriting);
+}
+
+.font-script {
+  font-family: var(--font-script);
+}
+
+.font-typewriter {
+  font-family: var(--font-typewriter);
+}
+
+/* Notebook Lined Paper Background */
+.notebook-ruled-paper {
+  background-color: #FAF8F5;
+  background-image: repeating-linear-gradient(
+    transparent,
+    transparent 31px,
+    #EADFCF 31px,
+    #EADFCF 32px
+  );
+  line-height: 32px;
+}
+
+/* Glassmorphism utilities */
+.glass-panel {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(20px) saturate(130%);
+  -webkit-backdrop-filter: blur(20px) saturate(130%);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+}
+
+/* Equalizer keyframe animations */
+@keyframes equalize {
+  0% { height: 4px; }
+  50% { height: 16px; }
+  100% { height: 8px; }
+}
+
+.animate-equalize-1 {
+  animation: equalize 0.9s infinite alternate ease-in-out;
+  animation-delay: 0.1s;
+}
+
+.animate-equalize-2 {
+  animation: equalize 0.9s infinite alternate ease-in-out;
+  animation-delay: 0.4s;
+}
+
+.animate-equalize-3 {
+  animation: equalize 0.9s infinite alternate ease-in-out;
+  animation-delay: 0.2s;
+}
+
+.animate-equalize-4 {
+  animation: equalize 0.9s infinite alternate ease-in-out;
+  animation-delay: 0.5s;
+}
