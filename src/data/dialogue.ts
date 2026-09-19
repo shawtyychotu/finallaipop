@@ -2,7 +2,7 @@ import { DialogueStep } from '../types';
 
 export const DIALOGUE_STEPS: DialogueStep[] = [
   {
-    text: "Okay... are you still mad at me? 🥺",
+    text: "friendssssss? 🥺",
     mood: "happy",
     yesScale: 1,
     noScale: 1,
